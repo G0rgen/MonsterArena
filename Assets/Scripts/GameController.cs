@@ -100,9 +100,9 @@ public class GameController : MonoBehaviour
 
     private Monster RegisterNewMonster(Monster monsterPrefab,Transform monsterSlot, MonsterUi newMonsterUi)
     {
-        // TODO Remove old monster.
+        ClearSlot(monsterSlot);
 
-       Monster newSpawned = Instantiate(monsterPrefab, monsterSlot);
+        Monster newSpawned = Instantiate(monsterPrefab, monsterSlot);
 
         UpdateTitle(newSpawned, newMonsterUi);
         UpdateHealth(newSpawned, newMonsterUi);

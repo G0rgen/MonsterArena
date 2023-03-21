@@ -124,6 +124,16 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 8439597753623980266, guid: b4d7d739dc59e234a960b06cd94f5db2,
+        type: 3}
+      propertyPath: attackName
+      value: Forest rush
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439597753623980266, guid: b4d7d739dc59e234a960b06cd94f5db2,
+        type: 3}
+      propertyPath: attackStrengh
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5334484404986094802, guid: b4d7d739dc59e234a960b06cd94f5db2, type: 3}
     m_RemovedGameObjects: []
