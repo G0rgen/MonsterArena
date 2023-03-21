@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -6,10 +5,13 @@ using UnityEngine.InputSystem;
 
 public class GameController : MonoBehaviour
 {
+    [SerializeField] private Transform monsterSlotA;
+    [SerializeField] private Transform monsterSlotB;
+    
     [SerializeField] private List<Monster> monsterPrefabs;
 
-    [SerializeField] private Monster monsterA;
-    [SerializeField] private Monster monsterB;
+     private Monster monsterA;
+     private Monster monsterB;
 
     [SerializeField] private MonsterUi monsterAUi;
     [SerializeField] private MonsterUi monsterBUi;
@@ -46,7 +48,7 @@ public class GameController : MonoBehaviour
     {
         if (monsterA.HasFainted() || monsterB.HasFainted())
         {
-            // TODO Spawn new monster
+           StartNewBattle();
             return;
         }
         
@@ -73,19 +75,49 @@ public class GameController : MonoBehaviour
         isMonsterATurn = !isMonsterATurn;
     }
 
-    private void Start()
+    private void StartNewBattle()
     {
-        RegisterNewMonster(monsterA, monsterAUi);
-        RegisterNewMonster(monsterB, monsterBUi);
+        int challengerAIndex = Random.Range(0, monsterPrefabs.Count);
+        int challengerBIndex = Random.Range(0, monsterPrefabs.Count);
+        // TODO Generate new challengerBIndex if the same as challengerAIndex
+        // Tip: use a while loop
 
+        Monster challengerA = monsterPrefabs[challengerAIndex];
+        Monster challengerB = monsterPrefabs[challengerBIndex];
+
+        monsterA = RegisterNewMonster(challengerA, monsterSlotA, monsterAUi);
+        monsterB = RegisterNewMonster(challengerB, monsterSlotB, monsterBUi);
+        
         commentaryText.SetText($"{monsterA.GetTitle()} trifft auf {monsterB.GetTitle()}!");
     }
+    
 
-    private void RegisterNewMonster(Monster newMonster, MonsterUi newMonsterUi)
+    private void Start()
     {
-        UpdateTitle(newMonster, newMonsterUi);
-        UpdateHealth(newMonster, newMonsterUi);
-    } 
+        StartNewBattle();
+
+    }
+
+    private Monster RegisterNewMonster(Monster monsterPrefab,Transform monsterSlot, MonsterUi newMonsterUi)
+    {
+        // TODO Remove old monster.
+
+       Monster newSpawned = Instantiate(monsterPrefab, monsterSlot);
+
+        UpdateTitle(newSpawned, newMonsterUi);
+        UpdateHealth(newSpawned, newMonsterUi);
+
+        return newSpawned;
+    }
+
+    private void ClearSlot(Transform slot)
+    {
+        for (int i = 0; i < slot.childCount; i++)
+        {
+            Transform child = slot.GetChild(i);
+            Destroy(child.gameObject);
+        }
+    }
     private void UpdateTitle(Monster newMonster, MonsterUi newMonsterUi)
     {
         newMonsterUi.UpdateTitle(newMonster.GetTitle());
