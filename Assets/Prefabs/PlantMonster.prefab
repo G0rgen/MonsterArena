@@ -117,7 +117,7 @@ PrefabInstance:
     - target: {fileID: 8439597753623980266, guid: b4d7d739dc59e234a960b06cd94f5db2,
         type: 3}
       propertyPath: title
-      value: Trawa
+      value: Green
       objectReference: {fileID: 0}
     - target: {fileID: 8439597753623980266, guid: b4d7d739dc59e234a960b06cd94f5db2,
         type: 3}

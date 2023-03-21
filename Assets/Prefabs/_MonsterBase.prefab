@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e124c4c366a17f04c931537bb6025083, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: Ogien
+  title: norman
   maxHealth: 5
 --- !u!1 &2611716130424107578
 GameObject:

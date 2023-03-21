@@ -5,6 +5,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 709676325569901361, guid: b4d7d739dc59e234a960b06cd94f5db2,
@@ -143,5 +144,13 @@ PrefabInstance:
       propertyPath: attackEffect
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8439597753623980266, guid: b4d7d739dc59e234a960b06cd94f5db2,
+        type: 3}
+      propertyPath: title
+      value: inferno
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4d7d739dc59e234a960b06cd94f5db2, type: 3}

@@ -174,8 +174,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8779b6ac5964bb4a8d13aaaac258dc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsterA: {fileID: 712597485}
-  monsterB: {fileID: 2611716129747451613}
+  monsterPrefabs:
+  - {fileID: 5270661586203420668, guid: 117aecc08b113354e87dc837114b9c7c, type: 3}
+  - {fileID: 6006949023285755877, guid: dad37d0ce5d136b47b7a8719b9533978, type: 3}
+  - {fileID: 1931888922185384739, guid: a9cbd21265cb0394cb2cf77f52f41f15, type: 3}
+  - {fileID: 1143042029912033740, guid: 914e4edd520362a4490ff115cf075330, type: 3}
+  - {fileID: 7601465346661011389, guid: 4b8a70f44813e0b4dae79e0ce2de2bde, type: 3}
+  monsterA: {fileID: 2611716129747451613}
+  monsterB: {fileID: 712597485}
   monsterAUi: {fileID: 804208334}
   monsterBUi: {fileID: 1680356171}
   commentaryText: {fileID: 1319921166}
