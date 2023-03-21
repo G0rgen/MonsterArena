@@ -151,6 +151,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439597753623980266, guid: b4d7d739dc59e234a960b06cd94f5db2,
         type: 3}
+      propertyPath: maxHealth
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439597753623980266, guid: b4d7d739dc59e234a960b06cd94f5db2,
+        type: 3}
       propertyPath: attackName
       value: feuer
       objectReference: {fileID: 0}
